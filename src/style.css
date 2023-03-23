@@ -1,0 +1,297 @@
+body {
+  color: white;
+  font-weight: 200;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+h1 {
+  display: inline;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+h2 {
+  display: inline;
+  position: relative;
+  font-size: 90px;
+  font-weight: 300;
+}
+
+footer {
+  color: #a3a3a3;
+  font-size: 11px;
+  margin-top: 10px;
+}
+
+.containerClear,
+.containerCloudy,
+.containerMist,
+.containerRaining,
+.containerThunderstorm,
+.containerSnow {
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 880px;
+  height: 530px;
+  border-radius: 15px;
+  margin: 80px auto;
+}
+
+.containerClear {
+  background-image: url("../src/images/clear.png");
+}
+
+.containerCloudy {
+  background-image: url("../src/images/clouds.png");
+}
+
+.containerMist {
+  background-image: url("../src/images/mist.png");
+}
+
+.containerRaining {
+  background-image: url("../src/images/rain.png");
+}
+
+.containerThunderstorm {
+  background-image: url("../src/images/thunderstorm.png");
+}
+
+.containerSnow {
+  background-image: url("../src/images/snow.png");
+}
+
+.row {
+  margin: 0;
+  padding: 0;
+}
+
+.col-city {
+  margin: 25px 0 0 10px;
+}
+
+.current-weather {
+  font-size: 17px;
+  font-weight: 200;
+}
+
+.col-celsius-fahrenheit {
+  display: block;
+  margin: -22px 0 0 510px;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.celsius-link,
+.fahrenheit-link {
+  color: white;
+  text-decoration: none;
+}
+
+.celsius-link:hover,
+.fahrenheit-link:hover {
+  color: white;
+  opacity: 60%;
+}
+
+.col-md-5 {
+  padding: 0px;
+  margin-top: 280px;
+  text-align: center;
+  width: 33%;
+}
+
+.temperature-degree {
+  font-size: 95px;
+  font-weight: 200;
+}
+
+.col-md-7 {
+  padding: 0px;
+  margin: 340px 0 0 10px;
+  width: 65%;
+}
+
+.col-humor-quote {
+  display: block;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.description {
+  display: block;
+  font-size: 17px;
+  font-weight: 200;
+  margin-top: -15px;
+}
+
+.col-day-settings {
+  display: block;
+  margin: 20px 10px;
+  font-size: 13px;
+  font-weight: 200;
+}
+
+.hr-day {
+  width: 200px;
+  background: linear-gradient(to right, white, transparent);
+}
+
+.current-time-date {
+  margin-top: -12px;
+}
+
+.col-4 {
+  width: 300px;
+  height: 530px;
+}
+
+.col-4 p {
+  display: inline;
+}
+
+.search-city {
+  display: inline;
+  margin: 25px 0 0 10px;
+  padding: 6px;
+  font-size: 14px;
+  font-weight: 200;
+  text-indent: 8px;
+  border: none;
+  border-radius: 20px;
+  opacity: 60%;
+  width: 155px;
+}
+
+.submit-button {
+  color: white;
+  background: none;
+  font-size: 14px;
+  font-weight: 200;
+  padding: 5.5px 10px;
+  border: 0.5px solid white;
+  border-radius: 20px;
+
+  transition: all 200ms ease-in-out;
+}
+
+.submit-button:hover {
+  cursor: pointer;
+  opacity: 70%;
+}
+
+.fa-map-marker-alt {
+  display: block;
+  color: white;
+  font-size: 16px;
+  margin: -33px 240px 0;
+  text-indent: -5.5px;
+  padding: 7.5px 15.5px;
+  border: 0.5px solid white;
+  border-radius: 20px;
+}
+
+.fa-map-marker-alt:hover {
+  cursor: pointer;
+  opacity: 70%;
+}
+
+.col-weather-specifications {
+  margin: 50px 0 0 10px;
+}
+
+.weather-details,
+.forecast-details {
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+.temperature,
+.feels-like,
+.humidity,
+.wind {
+  font-size: 13px;
+  padding: 5px 0;
+}
+
+.temperature-values {
+  margin-left: 120px;
+}
+
+.temperature-feels-like {
+  margin-left: 140px;
+}
+
+.humidity-value {
+  margin-left: 144px;
+}
+
+.wind-value {
+  margin-left: 165px;
+}
+
+.col-future-weather {
+  margin: 40px 0 0 10px;
+}
+
+.forecast {
+  font-size: 13px;
+  font-weight: 200;
+  padding: 5px 0;
+}
+
+.icon-clear,
+.icon-clouds,
+.icon-mist,
+.icon-rain,
+.icon-snow,
+.icon-thunderstorm {
+  width: 16px;
+  height: 13px;
+  margin-right: 20px;
+}
+
+.icon-clear {
+  content: url(../src/images/icon_clear.png);
+}
+
+.icon-clouds {
+  content: url(../src/images/icon_clouds.png);
+}
+
+.icon-mist {
+  content: url(../src/images/icon_mist.png);
+}
+
+.icon-rain {
+  content: url(../src/images/icon_rain.png);
+}
+
+.icon-snow {
+  content: url(../src/images/icon_snow.png);
+}
+
+.icon-thunderstorm {
+  content: url(../src/images/icon_thunderstorm.png);
+}
+
+.weather-forecast-temperature {
+  font-size: 13px;
+  font-weight: 200;
+  margin-top: 15px;
+  margin-left: 120px;
+}
+
+.git-hub-repository,
+.linkeding-profile {
+  color: #717c7d;
+  text-decoration: none;
+}
+
+.git-hub-repository:hover,
+.linkeding-profile:hover {
+  color: #717c7d;
+  text-decoration: underline;
+}
