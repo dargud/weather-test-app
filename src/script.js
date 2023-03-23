@@ -436,27 +436,6 @@ searchForm.addEventListener("submit", handleSubmit);
 
 searchCity("Moscow");
 
-//Current location
-
-function showCurrentLocation(position) {
-  let apiKey = "f0dtb6d30c39bdc3d6d10789o243610a";
-  let lat = position.coords.latitude;
-  let lon = position.coords.longitude;
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayWeatherCondition);
-
-  apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayForecast);
-}
-
-function getCurrentLocation(event) {
-  event.preventDefault();
-  navigator.geolocation.getCurrentPosition(showCurrentLocation);
-}
-
-let currentLocation = document.querySelector("#current-location");
-currentLocation.addEventListener("click", getCurrentLocation);
-
 //Feature Celsius to Fahrenheit
 
 function convertToFahrenheit(event) {
