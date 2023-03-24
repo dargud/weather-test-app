@@ -108,7 +108,7 @@ function displayWeatherCondition(response) {
   if (weatherSituation === "Clouds") {
     document.querySelector(
       "#quote"
-    ).innerHTML = `<em>A grey day provides the best light...</em>`;
+    ).innerHTML = `<em>Reninventando negocios...</em>`;
     document.querySelector("#description").innerHTML = `It's cloudy outside.`;
     document
       .querySelector("#background-image")
