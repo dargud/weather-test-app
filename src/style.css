@@ -209,6 +209,7 @@ footer {
 }
 
 .temperature,
+.feels-like,
 .humidity,
 .wind {
   font-size: 13px;

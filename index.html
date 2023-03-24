@@ -63,6 +63,8 @@
                                 id="city-input" />
                             <input type="submit" value="Search" class="submit-button" id="search-button" />
                         </form>
+
+                        <i class="fas fa-map-marker-alt" id="current-location"></i>
                     </div>
 
                     <div class="col-weather-specifications">
@@ -78,6 +80,11 @@
                             </span>
                         </div>
 
+                        <div class="feels-like">
+                            <p>Feels like</p>
+                            <p class="temperature-feels-like" id="feels-like"></p>
+                        </div>
+
                         <div class="humidity">
                             <p>Humidity</p>
                             <p class="humidity-value" id="humidity"></p>
@@ -90,20 +97,21 @@
                     </div>
 
                     <div class="col-future-weather">
+                        <div class="forecast-details">
+                            <p>Forecast</p>
+                        </div>
+                        <div class="forecast-structure" id="forecast"></div>
                     </div>
-                    <div class="forecast-structure" id="forecast"></div>
                 </div>
             </div>
+            <footer>
+                <a href="https://github.com/dargud/weather-test-app" target="_blank"
+                    class="git-hub-repository">Open-source code
+                </a>
+                by
+                <a>Darina Gudyma</a>
+            </footer>
         </div>
-        <footer>
-            <a href="https://github.com/dargud/weather-test-app" target="_blank" class="git-hub-repository">Open-source
-                code
-            </a>
-            by
-            <a>
-                Darina Gudyma</a>
-        </footer>
-    </div>
     </div>
     <script src="src/script.js"></script>
 </body>

@@ -410,7 +410,7 @@ function displayForecast(response) {
     <span class="icon">${icon}</span>
     <p>${formatHours(forecast.dt * 1000)}</p>
     <span class="weather-forecast-temperature">${Math.round(
-      forecast.main.current.temp
+      forecast.main.temp_max
     )}° ${Math.round(forecast.main.temp_min)}°</span>
   </div>`;
   }
@@ -421,7 +421,7 @@ function searchCity(city) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
 
-  apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
 
@@ -435,6 +435,27 @@ let searchForm = document.querySelector("#search-city");
 searchForm.addEventListener("submit", handleSubmit);
 
 searchCity("Moscow");
+
+//Current location
+
+function showCurrentLocation(position) {
+  let apiKey = "eb9542c65e739e0fb25ade97c749e2aa";
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayWeatherCondition);
+
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+function getCurrentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(showCurrentLocation);
+}
+
+let currentLocation = document.querySelector("#current-location");
+currentLocation.addEventListener("click", getCurrentLocation);
 
 //Feature Celsius to Fahrenheit
 
