@@ -410,18 +410,18 @@ function displayForecast(response) {
     <span class="icon">${icon}</span>
     <p>${formatHours(forecast.dt * 1000)}</p>
     <span class="weather-forecast-temperature">${Math.round(
-      forecast.main.temp_max
+      forecast.main.current.temp
     )}° ${Math.round(forecast.main.temp_min)}°</span>
   </div>`;
   }
 }
 
 function searchCity(city) {
-  let apiKey = "f0dtb6d30c39bdc3d6d10789o243610a";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}a&units=metric`;
+  let apiKey = "eb9542c65e739e0fb25ade97c749e2aa";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
 
-  apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}a&units=metric`;
+  apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
 
